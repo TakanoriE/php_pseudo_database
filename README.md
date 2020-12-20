@@ -14,19 +14,29 @@ $user->selectAll();
 
 ### insertメソッド
 $datas = array("hoge", "abcdef", "0");  // idはオートインクリメントの為、指定不要
+
 if( $user->insert($datas) ){  // 引数にid以外の値を格納した配列
+
   echo "Success!!<br>"; // 成功時
+  
 }else{
+
   echo "Error!!<br>"; //失敗時
+  
 }
 
 ### updateメソッド
 $datas = array("hoge", "abcdef", "0"); // idはオートインクリメントの為、指定不要
 // 引数にid以外の値を格納した配列と変更するレコードのid
+
 if( $user->update($datas, 4) ){
+
   echo "Success!!<br>"; // 成功時
+  
 }else{
+
   echo "Error!!<br>"; //失敗時
+  
 }
 
  
