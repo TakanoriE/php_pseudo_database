@@ -5,7 +5,7 @@ class CreateTable{
     $dir = './database/'.$name.'/';
     if( !( is_dir($dir) ) ){
       if( !( is_dir('./database') ) ){
-        mkdir('./database');
+        mkdir('./database', 0666);
       }
       mkdir($dir, 0666);
     }
