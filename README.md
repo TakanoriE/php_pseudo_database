@@ -3,6 +3,7 @@
 ## CreateTableクラス
 ### インスタンス作成 
 $col = array("id","name","password","permission");
+
 new CreateTable('user', $col);
 
 ## Databaseクラス
@@ -54,10 +55,12 @@ if( $user->delete(5) ){ // 引数に削除するレコードのid
 
 ### getTableメソッド
 // 取得したテーブル内のデータを2次元配列として返す
+
 $table = $user->getTable();
 
 ### getColumnsメソッド
 // 取得したテーブルのカラム名を配列として返す
+
 $columns = $user->getColumns();
 
 ### findメソッド
@@ -88,6 +91,7 @@ if( $lines ){
 
 ### getIdメソッド
 // レコードの配列を渡すことで、そのレコードのidを返す
+
 $lines = $user->where('permission', '1');
 
 $ids = $user->getId($lines);
@@ -102,4 +106,5 @@ foreach($ids as $id){
 // テーブルに関連するファイル全てが削除されるため注意
 
 $user = new Database('user');
+
 $user->deleteTable();
