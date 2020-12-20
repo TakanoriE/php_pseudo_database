@@ -17,11 +17,11 @@ $datas = array("hoge", "abcdef", "0");  // idはオートインクリメント�
 
 if( $user->insert($datas) ){  // 引数にid以外の値を格納した配列
 
-  echo "Success!!<br>"; // 成功時
+  echo "Success"; // 成功時
   
 }else{
 
-  echo "Error!!<br>"; //失敗時
+  echo "Error"; //失敗時
   
 }
 
