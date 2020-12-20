@@ -7,7 +7,7 @@ class CreateTable{
       if( !( is_dir('./database') ) ){
         mkdir('./database');
       }
-      mkdir($dir, 0755);
+      mkdir($dir, 0666);
     }
 
     $filePath = $dir.$name.'.csv';
